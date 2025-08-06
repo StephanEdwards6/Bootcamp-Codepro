@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Formulario de tareas.">
+    <title>CRUD - Tareas</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="bg-gray-100 text-gray-800 front-sans">
+    <header class="bg-indigo-800 text-white py-6 shadow-lg">
+        <div class="max-w-6xl mx-auto flex-col md:flex-row item-center justify-between">
+            <h1 class="text-3xl front-bold mb-4 mb:mb-0">Administrador de tareas</h1>
+            <nav>
+                <ul class="flex gap-6 text-sm md:text-base">
+                    <li><a href="" class="hover:underline">INICIO</a></li>
+                    <li><a href="" class="hover:underline">AGREGAR TAREAS</a></li>
+                    <li><a href="" class="hover:underline">MIS TAREAS</a></li>
+                    <li><a href="" class="hover:underline">AYUDA</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <div class="flex justify-center mt-6 mb-16">
+        <img class="w-4/5 rounded shadow-md" src="/Imagenes/crud-.png" alt="">
+    </div>
+
+    <section class="max-w-3x1 mx-auto bg-white p-6 mt-8 rounded shadow">
+        <h2 class="text-xl front-semibold mb-4">Gestion de tareas</h2>
+        <form action="" class="space-y-4">
+            <input type="text">
+
+            <label for="titulo" class="block front-medium">Titulo:</label>
+            <input type="text" class="w-full border border-gray-300 rounded px-3 py-2" required />
+
+            <label for="" class="block front-medium">Descripcion</label>
+            <textarea name="descripcion" id="" class="w-full border border-gray-300 rounded px-3 py-2"></textarea>
+
+            <label for="prioridad">Prioridad</label>
+            <select name="prioridad" id="prioridad" class="w-full border border-gray-300 rounded px-3 py-2">
+                <option value="">Selecciona prioridad</option>
+                <option value="alta">Alta</option>
+                <option value="media">Media</option>
+                <option value="baja">Baja</option>
+            </select>
+        
+            <label for="fecha-inicio" class="block front-medium">Fecha de inicio:</label>
+            <input type="date" id="fecha-inicio" name="fecha-inicio" class="w-full border border-gray-300 rounded px-3 py-2">
+            
+            <label for="fecha-limite" class="block front-medium">Fecha limite</label>
+            <input type="date" id="fecha-limite" name="fecha-limite" class="w-full border border-gray-300 rounded px-3 py-2">
+
+            <label for="estado" class="block front-medium">Estado</label>
+            <select name="estado" id="estado" class="w-full border border-gray-300 rounded px-3 py-2">
+                <option value="">Seleccionar estado</option>
+                <option value="pendiente">Pendiente</option>
+                <option value="en_proceso">En proceso</option>
+                <option value="completada">Completada</option>
+            </select>
+
+            <button type="submit" name="accion" value="agregar" class="bg-green-300 border border-gray-300 px-3 py-2 rounded">Agregar</button>
+
+        </form>
+    </section>
+
+    <section>
+        <h2 class="">Lista</h2>
+        <div>
+            <div>
+                <h3>Titulo de ejemplo</h3>
+                <form action="">
+                    <input type="hidden" name="id" value="1"/>
+                    <button type="submit" name="accion" value="editar">Editar</button>
+                </form>
+                <form action="" action="/tarea">
+                    <input type="hidden" name="id" value="1" />
+                    <button type="submit" name="accion" value="eliminar" 
+                    onclick="return confirm('Estas seguro de eliminar esta tarea?')">Eliminar</button>
+                </form>
+                <p><strong>Descripcion:</strong>Texto de ejemplo</p>
+                <p><strong>Prioridad:</strong>Alta</p>
+                <p><strong>Fecha de inicio:</strong>25/09/01</p>
+                <p><strong>Fecha limite</strong>25/09/10</p>
+                <p><strong>Estado:</strong>Pendiente</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>2025 Taller Frontend</p>
+        <nav>
+            <ul>
+                <li><a href="">Politicas de privacidad</a></li>
+                <li><a href="">Terminos</a></li>
+                <li><a href="">Contacto</a></li>
+            </ul>
+        </nav>
+    </footer>
+
+</body>
+</html>
